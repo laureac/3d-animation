@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400&family=Montserrat:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow: hidden;
+    color: blanchedalmond;
+    background: #422425;
+  }
+  
+  .scene,
+  canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .grid-container{
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    padding: 40px;
+    font-family: 'Lato', sans-serif;
+  }
+  .grid-item1{
+    font-size: 20px;
+    animation: appeartop 2.5s ease;
+  }
+  .grid-item2{
+    grid-column-start: 3;
+    font-size: 20px;
+    text-align: center;
+    animation: appeartop 2.7s ease;
+  }
+  .grid-item3{
+    grid-column-start: 5;
+     font-weight: 100;
+     font-size: 15px;
+     text-align: end;
+     animation: appeartop 2.9s ease;
+  }
+  .grid-item4{
+     align-self: end;
+     display: flex;
+     align-items: center;
+     animation: appearbottomlate 3.2s ease;
+  }
+  .grid-item4::before{
+    content: "";
+    width: 20px;
+    height: 2px;
+    color: blanchedalmond;
+    background: blanchedalmond;
+  }
+  span{
+    color: #422425;
+  }
+  h1{
+    font-size: 150px;
+    margin-top: 20rem;
+    padding: 40px;
+    font-family: 'Bebas Neue', cursive;
+    animation: appearbottom 1.5s ease;
+  }
+  .container{
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   width: 100vw;
+   height: 100vh;
+  }
+  @keyframes appearbottom{
+    0% {opacity: 0%;transform: translateY(80px);}
+  50%{opacity: 0%;transform: translateY(40px);}
+  100%{opacity: 100%;transform: translateY(0px);}
+} 
+  @keyframes appeartop{
+    0%{opacity: 0%;transform: translateY(-100px);}
+    50%{opacity: 0%;transform: translateY(-80px);}
+    100%{opacity: 100%;transform: translateY(0px);}
+} 
+@keyframes appearbottomlate{
+  0% {opacity: 0%;transform: translateY(80px);}
+  50%{opacity: 0%;transform: translateY(80px);}
+  70%{opacity: 0%;transform: translateY(20px);}
+  100%{opacity: 100%;transform: translateY(0px);}
+} 
+ 
