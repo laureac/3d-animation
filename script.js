@@ -2,20 +2,20 @@ let container;
 let camera;
 let renderer;
 let scene;
-let corona;
+let guitar;
 
 function init() {
   container = document.querySelector(".scene");
   
   scene = new THREE.Scene();
 
-  const fov = 500;
+  const fov = 50;
   const aspect = container.clientWidth / container.clientHeight;
   const near = 0.1;
-  const far = 3000;
+  const far = 1000;
 
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-  camera.position.set(0, 10, 1800);
+  camera.position.set(0, 20, 200);
 
   const ambient = new THREE.AmbientLight(0x404040, 4);
   scene.add(ambient);
@@ -31,9 +31,9 @@ function init() {
   container.appendChild(renderer.domElement);
 
   let loader = new THREE.GLTFLoader();
-  loader.load("./coronav/scene.gltf", function(gltf) {
+  loader.load("./guitar2/scene.gltf", function(gltf) {
     scene.add(gltf.scene);
-    corona = gltf.scene.children[0];
+    guitar = gltf.scene.children[0];
     
     animate();
   });
@@ -41,7 +41,7 @@ function init() {
 
 function animate() {
   requestAnimationFrame(animate);
-  corona.rotation.z += 0.005;
+  guitar.rotation.z += 0.004;
   renderer.render(scene, camera);
 }
 
