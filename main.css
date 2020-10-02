@@ -9,8 +9,9 @@
   
   body {
     overflow: hidden;
-    color: blanchedalmond;
-    background: #f5730a;
+    color: black;
+    background-image: url('./bg.jpg');
+    background-size: cover;
   }
   
   .scene,
@@ -54,8 +55,8 @@
     content: "";
     width: 20px;
     height: 2px;
-    color: blanchedalmond;
-    background: blanchedalmond;
+    color: black;
+    background: black;
   }
   span{
     color: #422425;

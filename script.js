@@ -31,7 +31,7 @@ function init() {
   container.appendChild(renderer.domElement);
 
   let loader = new THREE.GLTFLoader();
-  loader.load("./guitar2/scene.gltf", function(gltf) {
+  loader.load("./chairblack/scene.gltf", function(gltf) {
     scene.add(gltf.scene);
     guitar = gltf.scene.children[0];
     
